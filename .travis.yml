@@ -4,7 +4,7 @@ services:
     - docker
 
 berfore_install:
-    - docker build -t FedericoKlappenbach/docker-react f Dockerfile.dev .
+    - docker build -t federicoklappenbach/docker-react f Dockerfile.dev .
 
 script:
-    - docker run -e CI=true FedericoKlappenbach/docker-react npm run test -- --coverage
+    - docker run -e CI=true federicoklappenbach/docker-react npm run test -- --coverage
