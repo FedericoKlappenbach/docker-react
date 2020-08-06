@@ -4,10 +4,10 @@ services:
     - docker
 
 berfore_install:
-    - docker build -t federicoklappenbach/docker-react -f Dockerfile.dev .
+    - docker build -t feducci/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run -e CI=true federicoklappenbach/docker-react npm run test -- --coverage
+    - docker run -e CI=true feducci/docker-react npm run test -- --coverage
 
 deploy:
     provider: elasticbeanstalk
